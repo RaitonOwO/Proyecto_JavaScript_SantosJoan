@@ -8,12 +8,15 @@
 </head>
 <body>
     <header>Tu Gestor De Peliculas</header>
-    <input id="input" type="text" required>
-    <div id="tarjeta-formulario">
-        <h3>Genero</h3>
-        <select name="Genero" id="" required>
-            <option value="">Seleccione su opcion</option>
-            <option value="Accion">Accion</option>
+    <div class="tarjeta-formulario">
+        <h3>Nombre de la película o serie</h3>
+        <input id="input" type="text" required>
+    </div>
+    <div class="tarjeta-formulario">
+        <h3>Género</h3>
+        <select name="Genero" required>
+            <option value="">Seleccione su opción</option>
+            <option value="Accion">Acción</option>
             <option value="Comedia">Comedia</option>
             <option value="Terror">Terror</option>
             <option value="Romance">Romance</option>
@@ -22,29 +25,29 @@
             <option value="Drama">Drama</option>
         </select>
     </div>
-    <div id="terjeta-formulario">
+    <div class="tarjeta-formulario">
         <h3>Formato</h3>
-        <select name="" id="" required>
-            <option value="">Seleccione su opcion</option>
+        <select name="Formato" required>
+            <option value="">Seleccione su opción</option>
             <option value="Serie">Serie</option>
-            <option value="Pelicula">Pelicula</option>
+            <option value="Pelicula">Película</option>
         </select>
     </div>
-    <div id="tarjeta-formulario">
+    <div class="tarjeta-formulario">
         <h3>Plataforma</h3>
-        <select name="" id="" required>
-            <option value="">Seleccione su opcion</option>
+        <select name="Plataforma" required>
+            <option value="">Seleccione su opción</option>
             <option value="Netflix">Netflix</option>
             <option value="Amazon Prime">Amazon Prime</option>
             <option value="Disney Plus">Disney Plus</option>
-            <option value="hbo Max">HBO Max</option>
+            <option value="HBO Max">HBO Max</option>
             <option value="Crunchy Roll">Crunchy Roll</option>
         </select>
     </div>
-    <div id="tarjeta-calificacion">
-        <h3>Calificacion</h3>
-        <select name="" id="" required>
-            <option value="">Seleccione su opcion</option>
+    <div class="tarjeta-formulario">
+        <h3>Calificación</h3>
+        <select name="Calificacion" required>
+            <option value="">Seleccione su opción</option>
             <option value="⭐">⭐</option>
             <option value="⭐⭐">⭐⭐</option>
             <option value="⭐⭐⭐">⭐⭐⭐</option>
@@ -52,9 +55,10 @@
             <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
         </select>
     </div>
-    <div id="tarjeta-reseña">
+    <div class="tarjeta-formulario">
         <h3>Reseña</h3>
-        <input type="text" required>
+        <input type="text" name="Reseña" required>
     </div>
+    <button id="">Agregar</button>
 </body>
 </html>

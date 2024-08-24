@@ -1,0 +1,110 @@
+/* styles.css */
+
+body {
+    background-color: #0d0d0d;
+    font-family: 'Poppins', sans-serif;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #1a1a1a, #333333);
+    background-attachment: fixed;
+}
+
+header {
+    font-size: 3rem;
+    margin: 30px 0;
+    padding: 20px 40px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 65, 108, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+header:hover {
+    transform: scale(1.05);
+}
+
+input[type="text"], select {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ff4b2b;
+    border-radius: 8px;
+    background-color: #262626;
+    color: #f0f0f0;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(255, 75, 43, 0.4);
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+input[type="text"]:focus, select:focus {
+    outline: none;
+    border-color: #ff416c;
+    box-shadow: 0 0 20px rgba(255, 65, 108, 0.8);
+    transform: scale(1.02);
+}
+
+.tarjeta-formulario {
+    background: #1a1a1a;
+    border-radius: 12px;
+    margin: 15px 0;
+    padding: 25px;
+    width: 70%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+    border-left: 6px solid #ff416c;
+    transition: all 0.3s ease;
+}
+
+h3 {
+    margin: 0 0 15px;
+    color: #ff4b2b;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+option {
+    background-color: #333333;
+    color: #f0f0f0;
+}
+
+option:hover {
+    background-color: #ff416c;
+    color: #ffffff;
+}
+
+/* Estilos para el botón */
+button {
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(255, 65, 108, 0.8);
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+button:active {
+    background: linear-gradient(135deg, #e63946, #f1faee);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}

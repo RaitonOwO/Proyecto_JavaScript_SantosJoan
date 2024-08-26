@@ -54,6 +54,14 @@ input[type="text"]:focus, select:focus {
     transform: scale(1.02);
 }
 
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 1vw;
+}
+
+
 .tarjeta-formulario {
     background: #1a1a1a;
     border-radius: 12px;

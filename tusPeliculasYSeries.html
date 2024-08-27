@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tus Películas y Series</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <header>Tus Películas y Series</header>
+    <nav>
+        <button onclick="location.href='index.html'">Inicio</button>
+        <button onclick="location.href='gestor.html'">Ir al Gestor de Películas</button>
+        <button onclick="location.href='nuevasPeliculas.html'">Nuevas Películas</button>
+        <button onclick="location.href='tusPeliculasYSeries.html'">Tus películas y series</button>
+    </nav>
+    <div class="contenedor-tarjetas" id="lista-peliculas"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const listaPeliculas = document.getElementById('lista-peliculas');
+            const peliculas = JSON.parse(localStorage.getItem('peliculas')) || [];
+
+            listaPeliculas.innerHTML = '';
+            peliculas.forEach((pelicula, index) => {
+                const tarjeta = document.createElement('div');
+                tarjeta.classList.add('tarjeta-formulario');
+                tarjeta.innerHTML = `
+                    <h3>${pelicula.nombre}</h3>
+                    <p><strong>Género:</strong> ${pelicula.genero}</p>
+                    <p><strong>Formato:</strong> ${pelicula.formato}</p>
+                    <p><strong>Plataforma:</strong> ${pelicula.plataforma}</p>
+                    <p><strong>Calificación:</strong> ${pelicula.calificacion}</p>
+                    <p><strong>Reseña:</strong> ${pelicula.resena}</p>
+                    <button onclick="editarPelicula(${index})">Modificar</button>
+                    <button onclick="eliminarPelicula(${index})">Eliminar</button>
+                `;
+                listaPeliculas.appendChild(tarjeta);
+            });
+        });
+
+        function editarPelicula(index) {
+            localStorage.setItem('indiceEdicion', index);
+            location.href = 'gestor.html';
+        }
+
+        function eliminarPelicula(index) {
+            let peliculas = JSON.parse(localStorage.getItem('peliculas')) || [];
+            peliculas.splice(index, 1);
+            localStorage.setItem('peliculas', JSON.stringify(peliculas));
+            location.reload(); // Recarga la página para actualizar la lista de películas
+        }
+    </script>
 </body>
 </html>

@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Agregar Película o Serie</title>
+    <link rel="stylesheet" href="gestor.css">
 </head>
 <body>
-    <header>Tu Gestor De Peliculas</header>
+    <header>Tu Gestor De Películas</header>
     <nav>
+        <button onclick="location.href='index.html'">Inicio</button>
         <button onclick="location.href='gestor.html'">Ir al Gestor de Películas</button>
         <button onclick="location.href='nuevasPeliculas.html'">Nuevas Películas</button>
-        <button onclick="location.href='tusPeliculasYSeries.html'">Tus peliculas y series</button>
+        <button onclick="location.href='tusPeliculasYSeries.html'">Tus películas y series</button>
     </nav>
     <div class="tarjeta-formulario">
         <h3>Nombre de la película o serie</h3>
-        <input id="input" type="text" required>
+        <input id="nombre" type="text" required>
     </div>
     <div class="tarjeta-formulario">
         <h3>Género</h3>
-        <select name="Genero" required>
+        <select id="genero" required>
             <option value="">Seleccione su opción</option>
             <option value="Accion">Acción</option>
             <option value="Comedia">Comedia</option>
@@ -32,7 +33,7 @@
     </div>
     <div class="tarjeta-formulario">
         <h3>Formato</h3>
-        <select name="Formato" required>
+        <select id="formato" required>
             <option value="">Seleccione su opción</option>
             <option value="Serie">Serie</option>
             <option value="Pelicula">Película</option>
@@ -40,7 +41,7 @@
     </div>
     <div class="tarjeta-formulario">
         <h3>Plataforma</h3>
-        <select name="Plataforma" required>
+        <select id="plataforma" required>
             <option value="">Seleccione su opción</option>
             <option value="Netflix">Netflix</option>
             <option value="Amazon Prime">Amazon Prime</option>
@@ -51,7 +52,7 @@
     </div>
     <div class="tarjeta-formulario">
         <h3>Calificación</h3>
-        <select name="Calificacion" required>
+        <select id="calificacion" required>
             <option value="">Seleccione su opción</option>
             <option value="⭐">⭐</option>
             <option value="⭐⭐">⭐⭐</option>
@@ -62,8 +63,11 @@
     </div>
     <div class="tarjeta-formulario">
         <h3>Reseña</h3>
-        <input type="text" name="Reseña" required>
+        <input id="resena" type="text" required>
     </div>
-    <button id="">Agregar</button>
+    <button id="btn-agregar" onclick="agregarPelicula()">Agregar</button>
+    <button id="btn-guardar" onclick="guardarCambios()" style="display:none;">Guardar Cambios</button>
+
+    <script src="script.js"></script>
 </body>
 </html>

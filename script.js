@@ -5,10 +5,12 @@ function agregarPelicula() {
     const genero = document.getElementById('genero').value;
     const formato = document.getElementById('formato').value;
     const plataforma = document.getElementById('plataforma').value;
+    const estados = document.getElementById('estados').value;
     const calificacion = document.getElementById('calificacion').value;
     const resena = document.getElementById('resena').value;
 
-    const nuevaPelicula = { nombre, genero, formato, plataforma, calificacion, resena };
+
+    const nuevaPelicula = { estados, nombre, genero, formato, plataforma, calificacion, resena };
 
     const index = localStorage.getItem('indiceEdicion');
     if (index !== null) {
@@ -24,23 +26,23 @@ function agregarPelicula() {
 }
 
 function mostrarPeliculas() {
-    const listaPeliculas = document.getElementById('lista-peliculas');
-    listaPeliculas.innerHTML = '';
-
+    var listaPeliculas = document.getElementById('lista-peliculas');
+    listaPeliculas = '';
     peliculas.forEach((pelicula, index) => {
-        const tarjeta = document.createElement('div');
-        tarjeta.classList.add('tarjeta-formulario');
-        tarjeta.innerHTML = `
-            <h3>${pelicula.nombre}</h3>
-            <p><strong>Género:</strong> ${pelicula.genero}</p>
-            <p><strong>Formato:</strong> ${pelicula.formato}</p>
-            <p><strong>Plataforma:</strong> ${pelicula.plataforma}</p>
-            <p><strong>Calificación:</strong> ${pelicula.calificacion}</p>
-            <p><strong>Reseña:</strong> ${pelicula.resena}</p>
-            <button onclick="eliminarPelicula(${index})">Eliminar</button>
-            <button onclick="modificarPelicula(${index})">Modificar</button>
+        console.log(pelicula.estados)
+        listaPeliculas.innerHTML = `
+            <div class="tarjeta-formulario">
+                <h3>${pelicula.nombre}</h3>
+                <p><strong>Género:</strong> ${pelicula.genero}</p>
+                <p><strong>Formato:</strong> ${pelicula.formato}</p>
+                <p><strong>Plataforma:</strong> ${pelicula.plataforma}</p>
+                <p><strong>Estado:</strong> ${pelicula.estados}</p>
+                <p><strong>Calificación:</strong> ${pelicula.calificacion}</p>
+                <p><strong>Reseña:</strong> ${pelicula.resena}</p>
+                <button onclick="eliminarPelicula(${index})">Eliminar</button>
+                <button onclick="modificarPelicula(${index})">Modificar</button>
+            </div>
         `;
-        listaPeliculas.appendChild(tarjeta);
     });
 }
 

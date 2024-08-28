@@ -28,7 +28,7 @@ header {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1100px;
     box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
 }
 

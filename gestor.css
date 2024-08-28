@@ -1,6 +1,4 @@
-/* styles.css */
 
-/* General */
 body {
     background-color: #0d0d0d;
     font-family: 'Poppins', sans-serif;
@@ -34,6 +32,7 @@ header {
     max-width: 90%;
 }
 
+
 header:hover {
     transform: scale(1.05);
 }
@@ -44,19 +43,18 @@ nav {
     flex-direction: row;
     justify-content: center;
     column-gap: 1vw;
-    margin-bottom: 30px;
-    flex-wrap: wrap; /* Mejora la adaptabilidad en pantallas más pequeñas */
+    margin-bottom: 20px ;
+    flex-wrap: wrap; 
 }
 
-/* Form Card */
 .tarjeta-formulario {
     background: #1a1a1a;
     border-radius: 12px;
     margin: 15px 0;
     padding: 25px;
-    width: calc(100% - 40px); /* Asegura que no se desborde en pantallas pequeñas */
+    width: calc(100% - 40px); 
     max-width: 1000px;
-    box-sizing: border-box; /* Incluye el padding dentro del ancho total */
+    box-sizing: border-box; 
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
     border-left: 6px solid #ff416c;
     transition: all 0.3s ease;
@@ -74,7 +72,7 @@ input[type="text"], select {
     box-shadow: 0 0 10px rgba(255, 75, 43, 0.4);
     transition: all 0.3s ease;
     margin-bottom: 15px;
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    box-sizing: border-box; 
 }
 
 input[type="text"]:focus, select:focus {
@@ -109,12 +107,12 @@ button:active {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Hide the "Guardar Cambios" button by default */
+
 #btn-guardar {
     display: none;
 }
 
-/* Media queries para adaptarse a diferentes tamaños de pantalla */
+
 
 /* Tablets y pantallas medianas */
 @media (max-width: 1024px) {
@@ -124,7 +122,7 @@ button:active {
     }
 
     .tarjeta-formulario {
-        width: calc(100% - 40px); /* Mantiene un margen */
+        width: calc(100% - 40px);
         max-width: 800px;
     }
 
@@ -167,7 +165,7 @@ button:active {
     }
 
     input[type="text"], select {
-        font-size: 1rem; /* Reduce el tamaño de la fuente en pantallas muy pequeñas */
+        font-size: 1rem; 
     }
 
     button {

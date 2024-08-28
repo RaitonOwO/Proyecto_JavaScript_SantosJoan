@@ -56,6 +56,21 @@ input[type="text"]:focus, select:focus {
     transform: scale(1.02);
 }
 
+/* Estilo para los contenedores de filtros */
+.filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin: 20px auto;
+    max-width: 800px;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+}
+
 nav {
     display: flex;
     flex-direction: row;
@@ -228,7 +243,7 @@ button:active {
     }
 
     .tarjeta-formulario {
-        width: 100%; /* Asegura que las tarjetas se ajusten al ancho del contenedor */
+        width: 100%; 
         max-width: 400px;
         padding: 15px;
     }

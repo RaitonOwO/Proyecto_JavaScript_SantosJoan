@@ -10,7 +10,7 @@ body {
     min-height: 100vh;
     background-image: linear-gradient(135deg, #1a1a1a, #333333);
     background-attachment: fixed;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    overflow-x: hidden; 
 }
 
 header {
@@ -29,7 +29,7 @@ header {
     transition: transform 0.3s ease-in-out;
     width: 100%;
     max-width: 1100px;
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    box-sizing: border-box; 
 }
 
 header:hover {
@@ -68,7 +68,7 @@ input[type="text"]:focus, select:focus {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
     margin: 20px auto;
     max-width: 800px;
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    box-sizing: border-box; 
 }
 
 nav {
@@ -77,9 +77,9 @@ nav {
     justify-content: center;
     column-gap: 1vw;
     margin-bottom: 20px;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas si es necesario */
-    overflow-x: auto; /* Añade un scroll horizontal si es necesario */
-    padding: 0 10px; /* Agrega espacio a los lados para evitar el desbordamiento */
+    flex-wrap: wrap;
+    overflow-x: auto; 
+    padding: 0 10px; 
 }
 
 /* Contenedor de tarjetas */
@@ -91,7 +91,7 @@ nav {
     padding: 20px;
     width: 100%;
     max-width: 800px;
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    box-sizing: border-box; 
 }
 
 /* Ajustes a las tarjetas */
@@ -104,7 +104,7 @@ nav {
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
     border-left: 6px solid #ff416c;
     transition: all 0.3s ease;
-    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    box-sizing: border-box; 
 }
 
 /* Ajustes al texto h3 */
@@ -177,7 +177,7 @@ button:active {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-/* Media queries para adaptarse a diferentes tamaños de pantalla */
+
 
 /* Para tablets y pantallas medianas */
 @media (max-width: 1024px) {

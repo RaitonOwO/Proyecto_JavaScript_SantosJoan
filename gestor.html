@@ -23,7 +23,6 @@
         <select id="genero" required>
             <option value="">Seleccione su opción</option>
             <option value="Accion">Acción</option>
-            
             <option value="Comedia">Comedia</option>
             <option value="Terror">Terror</option>
             <option value="Romance">Romance</option>
@@ -54,15 +53,15 @@
     </div>
     <div class="tarjeta-formulario">
         <h3>Estado</h3>
-        <select id="estados" required>
-            <option value="En Emision">En Emision</option>
+        <select id="estados" required onchange="toggleCalificacionResena()">
+            <option value="En Emision">En Emisión</option>
             <option value="Temporada en espera">Temporada en espera</option>
             <option value="Terminada">Terminada</option>
         </select>
     </div>
-    <div class="tarjeta-formulario">
+    <div class="tarjeta-formulario" id="calificacion-container" style="display:none;">
         <h3>Calificación</h3>
-        <select id="calificacion" required>
+        <select id="calificacion">
             <option value="">Seleccione su opción</option>
             <option value="⭐">⭐</option>
             <option value="⭐⭐">⭐⭐</option>
@@ -71,9 +70,9 @@
             <option value="⭐⭐⭐⭐⭐">⭐⭐⭐⭐⭐</option>
         </select>
     </div>
-    <div class="tarjeta-formulario">
+    <div class="tarjeta-formulario" id="resena-container" style="display:none;">
         <h3>Reseña</h3>
-        <input id="resena" type="text" required>
+        <input id="resena" type="text">
     </div>
     <button id="btn-agregar" onclick="agregarPelicula()">Agregar</button>
     <button id="btn-guardar" onclick="guardarCambios()" style="display:none;">Guardar Cambios</button>

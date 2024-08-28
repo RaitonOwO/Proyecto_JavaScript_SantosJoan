@@ -38,7 +38,7 @@ Este proyecto es un gestor diseñado para organizar y hacer seguimiento de las p
 
 Para ver las diapositivas del proyecto sobre los diseños, haz clic en el siguiente enlace:
 
-[Ver diapositivas en Canva](https://www.canva.com/design/DAGPHfvbCCs/S0q92XbqurJL855s-l_xLQ/edit?utm_content=DAGPHfvbCCs&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+[Ver diapositivas en Canva](https://www.canva.com/design/DAGIYcV5cJk/MhQypeZJnbCiiwVqCnF2uw/edit?utm_content=DAGIYcV5cJk&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## 🛠️ Ejecución del Programa
 

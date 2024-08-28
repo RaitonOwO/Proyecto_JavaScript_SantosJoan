@@ -46,6 +46,7 @@ nav {
     flex-wrap: wrap;
 }
 
+
 nav button {
     width: 200px; /* Tamaño fijo para todos los botones */
     background: linear-gradient(135deg, #ff416c, #ff4b2b);

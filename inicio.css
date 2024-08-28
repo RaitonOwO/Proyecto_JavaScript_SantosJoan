@@ -184,6 +184,7 @@ button:active {
         overflow: hidden;
     }
 
+    
     .tarjeta-formulario {
         width: calc(100% - 30px); 
         max-width: 100%;

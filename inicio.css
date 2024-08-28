@@ -118,6 +118,9 @@ button:active {
 }
 
 @media (max-width: 1024px) {
+    body{
+        overflow: hidden;
+    }
     header {
         font-size: 2.5rem;
         max-width: 90%;
@@ -147,6 +150,10 @@ button:active {
         max-width: 100%;
     }
 
+    body{
+        overflow: hidden;
+    }
+
     h3 {
         font-size: 1.5rem;
     }
@@ -171,6 +178,10 @@ button:active {
 
     h3 {
         font-size: 1.3rem;
+    }
+
+    body{
+        overflow: hidden;
     }
 
     .tarjeta-formulario {

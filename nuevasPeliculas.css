@@ -1,24 +1,24 @@
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
-	background-color: #0d0d0d;
-	color: #f0f0f0;
-	background-image: linear-gradient(135deg, #1a1a1a, #333333);
-	background-attachment: fixed;
-    
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    background-image: linear-gradient(135deg, #1a1a1a, #333333);
+    background-attachment: fixed;
 }
+
 header {
     position: relative;
-	font-size: 3rem;
-    width: 80vw; 
-    max-width: 1200px; 
-    margin: 30px auto; 
-    padding: 20px 30px; 
+    font-size: 3rem;
+    width: 80vw;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px 30px;
     background: linear-gradient(135deg, #ff416c, #ff4b2b);
     color: #ffffff;
     border-radius: 15px;
@@ -35,18 +35,39 @@ header:hover {
     transform: scale(1.05);
 }
 
-
-header:hover {
-	
-    transform: scale(1.05);
-}
-
-nav{
+/* Navegación */
+nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    column-gap: 1vw;
-	margin-bottom: 20px;
+    align-items: center;
+    gap: 1vw;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+nav button {
+    width: 200px; /* Tamaño fijo para todos los botones */
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 65, 108, 0.8);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+nav button:hover {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+nav button:active {
+    background: linear-gradient(135deg, #e63946, #f1faee);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 button {
@@ -61,8 +82,6 @@ button {
     box-shadow: 0 0 15px rgba(255, 65, 108, 0.8);
     transition: background 0.3s ease, transform 0.3s ease;
     margin-top: 20px;
-    display: flex;
-    flex-direction: row;
 }
 
 button:hover {
@@ -76,61 +95,98 @@ button:active {
 }
 
 .contenedor {
-	width: 90%;
-	max-width: 1000px;
-	margin: 40px auto 100px auto;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 40px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto 100px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
 }
 
 .contenedor .pelicula {
-	text-align: center;
+    text-align: center;
 }
 
 .contenedor .pelicula .titulo {
-	font-size: 16px;
-	font-weight: 600;
-	color: #ff4b2b;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ff4b2b;
 }
 
 .contenedor .pelicula .poster {
-	width: 100%;
-	margin-bottom: 10px;
-	border-radius: 15px;
-	box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .paginacion {
-	position: fixed;
-	bottom: 0;
-	background: #1a1a1a;
-	width: 100%;
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-	padding: 10px;
-	box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    bottom: 0;
+    background: #1a1a1a;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .paginacion button {
-	cursor: pointer;
-	border: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	height: 50px;
-	width: 200px;
-	background: linear-gradient(135deg, #ff416c, #ff4b2b);
-	color: #ffffff;
-	border-radius: 100px;
-	font-family: 'Montserrat', sans-serif;
-	font-weight: 600;
-	transition: background 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    color: #ffffff;
+    border-radius: 100px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .paginacion button:hover {
-	background: linear-gradient(135deg, #ff4b2b, #ff416c);
-	transform: scale(1.05);
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    nav button {
+        width: 45%; /* Tamaño consistente en pantallas medianas */
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 2rem;
+        padding: 15px 20px;
+    }
+
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    nav {
+        justify-content: space-evenly;
+    }
+
+    nav button {
+        width: 45%; /* Tamaño consistente en pantallas pequeñas */
+        margin-bottom: 10px;
+    }
+
+    .paginacion button {
+        width: 150px; /* Ajusta el ancho de los botones de paginación */
+    }
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tus Películas y Series</title>
+    <title>Filtrar Películas, Series y Libros</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,15 +14,61 @@
         <button onclick="location.href='nuevasPeliculas.html'">Nuevas Películas</button>
         <button onclick="location.href='tusPeliculasYSeries.html'">Tus películas y series</button>
     </nav>
+
+    <div class="filtros">
+        <input type="text" id="filtro-nombre" placeholder="Filtrar por nombre">
+        <select id="filtro-genero">
+            <option value="">Todos los géneros</option>
+            <option value="Accion">Acción</option>
+            <option value="Comedia">Comedia</option>
+            <option value="Terror">Terror</option>
+            <option value="Romance">Romance</option>
+            <option value="Aventura">Aventura</option>
+            <option value="Animado">Animado</option>
+            <option value="Drama">Drama</option>
+        </select>
+        <select id="filtro-estado">
+            <option value="">Todos los estados</option>
+            <option value="En Emision">En Emisión</option>
+            <option value="Terminada">Terminada</option>
+            <option value="En Progreso">En Progreso</option>
+        </select>
+        <select id="filtro-plataforma">
+            <option value="">Todas las plataformas</option>
+            <option value="Netflix">Netflix</option>
+            <option value="Amazon Prime">Amazon Prime</option>
+            <option value="Disney Plus">Disney Plus</option>
+            <option value="HBO Max">HBO Max</option>
+            <option value="Crunchy Roll">Crunchy Roll</option>
+        </select>
+        <button onclick="filtrarPeliculas()">Filtrar</button>
+    </div>
+
+ 
     <div class="contenedor-tarjetas" id="lista-peliculas"></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
+            mostrarPeliculas(); 
+        });
+
+        function mostrarPeliculas(filtros = {}) {
             const listaPeliculas = document.getElementById('lista-peliculas');
             const peliculas = JSON.parse(localStorage.getItem('peliculas')) || [];
 
+         
+            const peliculasFiltradas = peliculas.filter(pelicula => {
+                return (
+                    (!filtros.nombre || pelicula.nombre.toLowerCase().includes(filtros.nombre.toLowerCase())) &&
+                    (!filtros.genero || pelicula.genero === filtros.genero) &&
+                    (!filtros.estado || pelicula.estados === filtros.estado) &&
+                    (!filtros.plataforma || pelicula.plataforma === filtros.plataforma)
+                );
+            });
+
+           
             listaPeliculas.innerHTML = '';
-            peliculas.forEach((pelicula, index) => {
+            peliculasFiltradas.forEach((pelicula, index) => {
                 const tarjeta = document.createElement('div');
                 tarjeta.classList.add('tarjeta-formulario');
                 tarjeta.innerHTML = `
@@ -38,7 +84,7 @@
                 `;
                 listaPeliculas.appendChild(tarjeta);
             });
-        });
+        }
 
         function editarPelicula(index) {
             localStorage.setItem('indiceEdicion', index);
@@ -49,7 +95,23 @@
             let peliculas = JSON.parse(localStorage.getItem('peliculas')) || [];
             peliculas.splice(index, 1);
             localStorage.setItem('peliculas', JSON.stringify(peliculas));
-            location.reload(); // Recarga la página para actualizar la lista de películas
+            location.reload();
+        }
+
+        function filtrarPeliculas() {
+            const nombre = document.getElementById('filtro-nombre').value;
+            const genero = document.getElementById('filtro-genero').value;
+            const estado = document.getElementById('filtro-estado').value;
+            const plataforma = document.getElementById('filtro-plataforma').value;
+
+            const filtros = {
+                nombre,
+                genero,
+                estado,
+                plataforma
+            };
+
+            mostrarPeliculas(filtros); 
         }
     </script>
 </body>
